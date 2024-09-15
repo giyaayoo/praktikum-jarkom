@@ -1,0 +1,76 @@
+1. Aktivitas yang Dilakukan dan Durasi Capturing Packet 
+   Kegiatan yang dilakukan adalah menangkap packet menggunakan aplikasi Wireshark selama kurang lebih 13 menit. Selama proses ini, beberapa aktivitas yang diamati meliputi:
+   - Streaming video
+   - Pengunggahan dan pengunduhan file
+   - Bermain game online  
+   Durasi keseluruhan menangkap packet: 13 menit 14 detik.
+
+2. Tabel Hasil Pengukuran Throughput, Packet Loss, Delay, dan Jitter
+
+   | Pengukuran     | Nilai          | Kategori        |
+   |----------------|----------------|-----------------|
+   | Throughput     | 5.628 kbps     | Sangat Baik     |
+   | Packet Loss    | 0%             | Sangat Baik     |
+   | Delay          | 1.52 ms        | Sangat Baik     |
+   | Jitter         | 2.5 ms         | Baik            |
+
+3. Perhitungan Melalui Rumus dari Throughput, Packet Loss, Delay, dan Jitter
+
+   a. Throughput  
+   Throughput mengukur seberapa cepat data dikirimkan, dan dihitung dengan rumus:  
+   Throughput = Total Data yang Ditransfer / Durasi Transfer  
+   Jika data yang ditransfer adalah 5.628 kbps dan durasi transfer selama 13 menit 14 detik (setara dengan 794 detik), maka:  
+   Throughput = 5.628 kbps
+
+   b. Packet Loss
+   Packet Loss dihitung dengan menggunakan rumus:  
+   Packet Loss = (Jumlah Paket yang Hilang / Total Paket yang Dikirim) x 100%  
+   Jika tidak ada paket yang hilang, maka:  
+   Packet Loss = (0 / Total Paket) x 100% = 0%
+
+   c. Delay
+   Delay adalah waktu yang dibutuhkan paket untuk sampai dari pengirim ke penerima. Rumusnya:  
+   Delay = Total Waktu (s) / Jumlah Paket  
+   Jika delay yang diukur adalah 1.52 ms, maka ini adalah nilai yang digunakan.
+
+   d. Jitter 
+   Jitter adalah variasi dalam delay, dihitung dengan rumus:  
+   Jitter = sqrt(sum((D_i - D_avg)^2) / n)  
+   Di mana:
+   - D_i adalah delay pada paket ke-i,
+   - D_avg adalah rata-rata delay,
+   - n adalah jumlah paket.  
+   Namun, jika nilai jitter sudah diberikan sebesar 2.5 ms, maka perhitungan lebih lanjut tidak diperlukan.
+
+   e. Rata-Rata Indeks QoS 
+   Untuk menghitung rata-rata indeks Quality of Service (QoS):  
+   Rata-Rata Indeks = (Indeks Throughput + Indeks Packet Loss + Indeks Delay + Indeks Jitter) / Total Pengukuran  
+   Dengan rincian:  
+   - Indeks Throughput = 5
+   - Indeks Packet Loss = 5
+   - Indeks Delay = 5
+   - Indeks Jitter = 4  
+   Maka:  
+   Rata-Rata Indeks = (5 + 5 + 5 + 4) / 4 = 4.75  
+   Jadi, rata-rata indeks QoS adalah 4.75.
+
+4. Tabel Indeks Berdasarkan Pengukuran QoS
+
+   | Pengukuran      | Nilai                      | Indeks       | Kategori     |
+   |-----------------|----------------------------|--------------|--------------|
+   | Throughput      | 5.628 kbps                 | 5            | Sangat Baik  |
+   | Packet Loss     | 0%                         | 5            | Sangat Baik  |
+   | Delay           | 1.52 ms                    | 5            | Sangat Baik  |
+   | Jitter          | 2.5 ms                     | 4            | Baik         |
+   | Rata-Rata Indeks| -                          | 4.75         | Sangat Baik  |
+
+5. Kesimpulan
+   Berdasarkan hasil pengukuran kualitas layanan (QoS):
+   - Throughput sebesar 5.628 kbps menunjukkan kecepatan transmisi yang sangat baik.
+   - Packet Loss sebesar 0% menunjukkan tidak ada kehilangan paket, yang merupakan kondisi ideal.
+   - Delay sebesar 1.52 ms sangat rendah, menandakan latensi yang sangat baik.
+   - Jitter sebesar 2.5 ms menunjukkan variasi dalam delay yang masih dapat diterima, dan tetap baik untuk aplikasi yang membutuhkan waktu nyata.
+
+6. Sumber/Referensi  
+   laserX10. (2021). Cara Mengukur Throughput, Packet Loss, Delay dan Jitter (Parameter QoS) Menggunakan Wireshark. Diambil dari https://youtu.be/rlBs6HKfPfQ?si=3QlHR6-L-nfcm80W   
+   Quality of Service (QoS) Measurement Tutorial. (2024). Diambil dari https://youtu.be/rlBs6HKfPfQ?si=30MaLN5GpS9omnTM
